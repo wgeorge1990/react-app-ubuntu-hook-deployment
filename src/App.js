@@ -5,7 +5,20 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Welcome to my react app being served on Digital Ocean and being redployed using webhooks written in GO.
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
