@@ -15,7 +15,7 @@ class MainSideBarWithTransition extends Component {
     dimmed: false,
     visible: true,
   }
-
+  //add comments
   handleAnimationChange = () =>
     this.setState(({ visible: !this.state.visible }))
   
