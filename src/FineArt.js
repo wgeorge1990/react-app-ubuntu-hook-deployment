@@ -6,20 +6,19 @@ export default function FineArt() {
         <div>
             <Grid>
                 {/* This is where the menu buttons will go */}
-                <Grid.Row columns={1} centered>
+                {/* <Grid.Row columns={1} centered>
                     <Grid.Column>
                         
                     </Grid.Column>
-                </Grid.Row>
+                </Grid.Row> */}
 
-                <Grid.Row columns={1} centered>
-                    {/* This will be the image Modal triggered by a button */}
+                {/* <Grid.Row columns={1} centered>
                     <Grid.Column>
                         <Container>
                             <Image fluid src={require('./images/placeholders/image.png')} />
                         </Container>
                     </Grid.Column>
-                </Grid.Row>
+                </Grid.Row> */}
 
                 <Grid.Row columns={3}>
                     <Grid.Column>

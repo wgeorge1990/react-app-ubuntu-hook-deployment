@@ -1,35 +1,56 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import { Image, Menu, Segment, Sidebar, Button, Container } from 'semantic-ui-react'
+import windowSize from 'react-window-size';
+
 import Home from './Home'
 import FineArt from './FineArt'
 import Resume from './Resume'
 import Development from './Development'
 import Blogs from './Blogs'
 
-class MainSideBarWithTransition extends Component {
+class App extends Component {
   state = {
     animation: 'scale down',
     direction: 'left',
     dimmed: false,
-    visible: true
+    visible: true,
+    buttonText: "Hide Menu"
   }
-  //add comments
+
   hideOnMouseLeave = () => { this.setState({ visible: !this.state.visible }) }
+
+  showSideBar = () => { this.setState({ visible: !this.state.visible }) }
   
-    //Dims on sidebar animation
-      // this.setState(({ visible: !this.state.visible, dimmed: !this.state.dimmed }))
-  showSideBar = () => { this.setState({ visible: !this.state.visible })}
+  componentDidMount = () => {
+    console.log(this.props.windowWidth, this.props.windowHeight)
+  }
+
+  showMenuForMobile = () => {
+    if (this.state.visible) {
+      this.setState({visible: false, buttonText: "Show Menu"})
+    } else {
+      this.setState({ visible: true, buttonText: "Hide Menu" })
+    }
+  }
     
   render() {
     const { animation, dimmed, direction, visible } = this.state
     return (
       <Container
-        style={{ "width": "80%" }}
+        style={{ "width": "99%" }}
         onMouseLeave={this.showSideBar}
-      
       >
+        {this.props.windowWidth < 769 ? 
+          <div>
+            <Button.Group basic>
+              <Button onClick={this.showMenuForMobile}>{this.state.buttonText}</Button>
+              {/* <Button>Two</Button>
+              <Button>Three</Button> */}
+            </Button.Group>
+          </div> : null} 
+        
         {/* {this.state.visible ? null : <Button onClick={this.hideOnMouseLeave}>Toggle Menu</Button>} */}
         <Sidebar.Pushable as={Segment} >
           <Sidebar
@@ -77,7 +98,6 @@ class MainSideBarWithTransition extends Component {
             </Link>
           </Sidebar>
           
-
           <Sidebar.Pusher dimmed={dimmed && visible}>
             <Segment basic
               >
@@ -96,6 +116,6 @@ class MainSideBarWithTransition extends Component {
   }
 }
 
-export default MainSideBarWithTransition
+export default windowSize(App)
 
 
