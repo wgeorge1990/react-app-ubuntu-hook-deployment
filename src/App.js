@@ -43,9 +43,12 @@ class App extends Component {
         onMouseLeave={this.showSideBar}
       >
         {this.props.windowWidth < 769 ? 
-          <div>
+          <div style={{ "margin-top": 7 + 'px', "margin-bottom": "-10px" }}>
             <Button.Group basic>
-              <Button onClick={this.showMenuForMobile}>{this.state.buttonText}</Button>
+              <Button
+                onClick={this.showMenuForMobile}
+                style={{"margin": 2 + 'px'}}
+                >{this.state.buttonText}</Button>
               {/* <Button>Two</Button>
               <Button>Three</Button> */}
             </Button.Group>
