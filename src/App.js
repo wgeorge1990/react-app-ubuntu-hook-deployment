@@ -117,5 +117,3 @@ class App extends Component {
 }
 
 export default windowSize(App)
-
-
