@@ -1,63 +1,79 @@
 import React from 'react'
-import { Segment, Image, Grid } from 'semantic-ui-react'
+import { Segment, Image, Grid, Container } from 'semantic-ui-react'
 
 export default function FineArt() {
     return (
         <div>
             <Grid>
+                {/* This is where the menu buttons will go */}
+                <Grid.Row columns={1} centered>
+                    <Grid.Column>
+                        
+                    </Grid.Column>
+                </Grid.Row>
+
+                <Grid.Row columns={1} centered>
+                    {/* This will be the image Modal triggered by a button */}
+                    <Grid.Column>
+                        <Container>
+                            <Image fluid src={require('./images/placeholders/image.png')} />
+                        </Container>
+                    </Grid.Column>
+                </Grid.Row>
+
                 <Grid.Row columns={3}>
                     <Grid.Column>
-                        <Image src={require('./images/1.jpg')} />
+                        <Image src={require('./images/fineart/1.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/4.jpg')} />
+                        <Image src={require('./images/fineart/4.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/3.jpg')} />
+                        <Image src={require('./images/fineart/3.jpg')} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={3}>
                     <Grid.Column>
-                        <Image src={require('./images/2.jpg')} />
+                        <Image src={require('./images/fineart/2.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/7.jpg')} />
+                        <Image src={require('./images/fineart/7.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/9.jpg')} />
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row columns={3}>
-                    <Grid.Column>
-                        <Image src={require('./images/10.jpg')} />
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Image src={require('./images/11.jpg')} />
-                    </Grid.Column>
-                    <Grid.Column>
-                        <Image src={require('./images/6.jpg')} />
+                        <Image src={require('./images/fineart/9.jpg')} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={3}>
                     <Grid.Column>
-                        <Image src={require('./images/13.jpg')} />
+                        <Image src={require('./images/fineart/10.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/12.jpg')} />
+                        <Image src={require('./images/fineart/11.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/15.jpg')} />
+                        <Image src={require('./images/fineart/6.jpg')} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={3}>
                     <Grid.Column>
-                        <Image src={require('./images/5.jpg')} />
+                        <Image src={require('./images/fineart/13.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/8.jpg')} />
+                        <Image src={require('./images/fineart/12.jpg')} />
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src={require('./images/14.jpg')} />
+                        <Image src={require('./images/fineart/15.jpg')} />
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={3}>
+                    <Grid.Column>
+                        <Image src={require('./images/fineart/5.jpg')} />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Image src={require('./images/fineart/8.jpg')} />
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Image src={require('./images/fineart/14.jpg')} />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

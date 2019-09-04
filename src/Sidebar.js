@@ -13,7 +13,6 @@ export default function Sidebar() {
                 <i class="home icon"></i>
                 Home
             </Link>
-
             <Link to='/FineArt' className="item">
                 <i class="paint brush icon"></i>
                 FineArt
