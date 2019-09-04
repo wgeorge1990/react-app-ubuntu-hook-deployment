@@ -23,7 +23,7 @@ class MainSideBarWithTransition extends Component {
     const { animation, dimmed, direction, visible } = this.state
     return (
       <div>
-        {this.state.visible ? null : <Button onClick={this.handleAnimationChange}>Toggle Menu</Button>}
+        {/* {this.state.visible ? null : <Button onClick={this.handleAnimationChange}>Toggle Menu</Button>} */}
         <Sidebar.Pushable as={Segment}>
           <Sidebar
             as={Menu}

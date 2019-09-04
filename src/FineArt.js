@@ -1,11 +1,9 @@
 import React from 'react'
 import { Segment, Image, Grid } from 'semantic-ui-react'
-import SectionHeader from './SectionHeader'
 
 export default function FineArt() {
     return (
         <div>
-            <SectionHeader title={"Fine Art"} />
             <Grid>
                 <Grid.Row columns={3}>
                     <Grid.Column>
