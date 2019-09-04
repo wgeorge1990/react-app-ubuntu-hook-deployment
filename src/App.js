@@ -11,10 +11,10 @@ import Blogs from './Blogs'
 
 function App() {
   return (
-    <Container fluid>
+    // <Container fluid>
         <Grid  >
         <Grid.Row stretched>
-          <Grid.Column  width={2}>
+          <Grid.Column  fluid width={2}>
             <Sidebar />
           </Grid.Column>
           <Grid.Column width={14}>
@@ -28,7 +28,9 @@ function App() {
           </Grid.Column>
           </Grid.Row>
         </Grid>
-      </Container>
+      // </Container>
   )
 }
 export default App;
+
+

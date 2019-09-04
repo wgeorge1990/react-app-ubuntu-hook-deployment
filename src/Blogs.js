@@ -9,8 +9,6 @@ export default function Blogs(props) {
                 title={"Blogs"}
                 blurb={"This is where i will fetch and feed in all of my personal blogs about art, technology, development, and life"}/>
             <Segment>Blogs</Segment>
-            <Segment>Blogs</Segment>
-            <Segment>Blogs</Segment>
         </div>
     )
 }

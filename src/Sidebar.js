@@ -1,19 +1,16 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import { Image } from 'semantic-ui-react'
+import { Image, Container } from 'semantic-ui-react'
 import {Link } from 'react-router-dom'
 
 export default function Sidebar() {
     return (
         <div
             className="ui left visible demo vertical inverted sidebar labeled icon menu"
-            style={{ "display": "flex", "width": "190px" }}
+            style={{ "display": "flex", "width": "8%" }}
             >
-            <a>
-                <Image src={require('./images/headshot.jpg')} />
-                {/* <Image src={process.env.PUBLIC_URL + '/headshot.jpg'} /> */}
-            </a>
-
+            <Image src={require('./images/headshot.jpg')} />
+               
             <Link to='/' className="item" >
                 <i class="home icon"></i>
                 Home
