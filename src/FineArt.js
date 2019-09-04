@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Image, Grid, Container } from 'semantic-ui-react'
+import { Image, Grid } from 'semantic-ui-react'
 
 export default function FineArt() {
     return (

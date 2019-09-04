@@ -25,6 +25,9 @@ class App extends Component {
   
   componentDidMount = () => {
     console.log(this.props.windowWidth, this.props.windowHeight)
+    fetch("http://localhost:5000/testAPI")
+      .then(res => res.text())
+      .then(res =>  console.log(res))
   }
 
   showMenuForMobile = () => {
@@ -66,9 +69,9 @@ class App extends Component {
             inverted
             vertical
             visible={visible}
-            size={'thin'}
+            size={'small'}
           >
-            <Link>
+            <Link to='/'>
               <Image
               src={require('./images/profile/headshot.jpg')}
               onClick={this.hideOnMouseLeave}
@@ -76,27 +79,27 @@ class App extends Component {
             </Link>
 
             <Link to='/' className="item" >
-              <i class="home icon"></i>
+              <i className="home icon"></i>
                 Home
             </Link>
 
             <Link to='/FineArt' className="item">
-              <i class="paint brush icon"></i>
+              <i className="paint brush icon"></i>
               FineArt
             </Link>
 
             <Link to="/Development" className="item">
-              <i class="computer icon"></i>
+              <i className="computer icon"></i>
               Development
             </Link>
           
             <Link to="/Blogs" className="item">
-              <i class="smile icon"></i>
+              <i className="smile icon"></i>
               Blogs
             </Link>
 
             <Link to="/Resume" className="item">
-              <i class="pencil icon"></i>
+              <i className="pencil icon"></i>
               Resume
             </Link>
           </Sidebar>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Container, Image } from 'semantic-ui-react'
+import { Segment } from 'semantic-ui-react'
 
 export default function Home() {
     return (
