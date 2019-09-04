@@ -5,12 +5,10 @@ import {Link } from 'react-router-dom'
 
 export default function Sidebar() {
     return (
-        <div
-            className="ui left visible demo vertical inverted sidebar labeled icon menu"
-            style={{ "display": "flex", "width": "8%" }}
-            >
+        <div>
+            <Menu.Item>
             <Image src={require('./images/headshot.jpg')} />
-               
+            </Menu.Item>
             <Link to='/' className="item" >
                 <i class="home icon"></i>
                 Home
@@ -33,7 +31,6 @@ export default function Sidebar() {
                 <i class="pencil icon"></i>
                 Resume
             </Link>
-
         </div>
     )
 }

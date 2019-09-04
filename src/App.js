@@ -1,63 +1,14 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Image, Menu, Segment, Sidebar, } from 'semantic-ui-react'
-//Components for each section of portfolio
+import { Image, Menu, Segment, Sidebar, Button } from 'semantic-ui-react'
 import Home from './Home'
 import FineArt from './FineArt'
 import Resume from './Resume'
 import Development from './Development'
 import Blogs from './Blogs'
 
-
-const VerticalSidebar = ({ animation, direction, visible }) => (
-  <Sidebar
-    as={Menu}
-    animation={animation}
-    direction={direction}
-    icon='labeled'
-    inverted
-    vertical
-    visible={visible}
-    width='thin'
-  >
-    <Image
-      src={require('./images/headshot.jpg')}
-    />
-
-    <Link to='/' className="item" >
-      <i class="home icon"></i>
-      Home
-    </Link>
-
-    <Link to='/FineArt' className="item">
-      <i class="paint brush icon"></i>
-      FineArt
-    </Link>
-
-    <Link to="/Development" className="item">
-      <i class="computer icon"></i>
-      Development
-            </Link>
-    <Link to="/Blogs" className="item">
-      <i class="smile icon"></i>
-      Blogs
-            </Link>
-    <Link to="/Resume" className="item">
-      <i class="pencil icon"></i>
-      Resume
-    </Link>
-  </Sidebar>
-)
-
-VerticalSidebar.propTypes = {
-  animation: PropTypes.string,
-  direction: PropTypes.string,
-  visible: PropTypes.bool,
-}
-
-
-export default class SidebarExampleTransitions extends Component {
+class MainSideBarWithTransition extends Component {
   state = {
     animation: 'scale down',
     direction: 'left',
@@ -65,26 +16,53 @@ export default class SidebarExampleTransitions extends Component {
     visible: true,
   }
 
-  handleAnimationChange = (animation) => () =>
-    this.setState((prevState) => ({ animation, visible: !prevState.visible }))
-
-  handleDimmedChange = (e, { checked }) => this.setState({ dimmed: checked })
-
-  handleDirectionChange = (direction) => () =>
-    this.setState({ direction, visible: false })
-
+  handleAnimationChange = () =>
+    this.setState(({ visible: !this.state.visible }))
+  
   render() {
     const { animation, dimmed, direction, visible } = this.state
-    const vertical = direction === 'bottom' || direction === 'top'
-
     return (
       <div>
+        {this.state.visible ? null : <Button onClick={this.handleAnimationChange}>Toggle Menu</Button>}
         <Sidebar.Pushable as={Segment}>
-            <VerticalSidebar
-              animation={animation}
-              direction={direction}
-              visible={visible}
-            />
+          <Sidebar
+            as={Menu}
+            animation={animation}
+            direction={direction}
+            icon='labeled'
+            inverted
+            vertical
+            visible={visible}
+            width='thin' >
+              <Image
+              src={require('./images/headshot.jpg')}
+              onClick={this.handleAnimationChange}
+              />
+
+              <Link to='/' className="item" >
+                <i class="home icon"></i>
+                Home
+              </Link>
+
+              <Link to='/FineArt' className="item">
+                <i class="paint brush icon"></i>
+                FineArt
+              </Link>
+
+              <Link to="/Development" className="item">
+                <i class="computer icon"></i>
+                Development
+              </Link>
+              <Link to="/Blogs" className="item">
+                <i class="smile icon"></i>
+                Blogs
+              </Link>
+              <Link to="/Resume" className="item">
+                <i class="pencil icon"></i>
+                Resume
+              </Link>
+          </Sidebar>
+)
           <Sidebar.Pusher dimmed={dimmed && visible}>
             <Segment basic>
                <Switch>
@@ -102,5 +80,6 @@ export default class SidebarExampleTransitions extends Component {
   }
 }
 
+export default MainSideBarWithTransition
 
 
