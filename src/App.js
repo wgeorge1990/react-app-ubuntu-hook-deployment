@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 // import PropTypes from 'prop-types'
-import { Image, Menu, Segment, Sidebar, Button, Container } from 'semantic-ui-react'
+import { Image, Menu, Segment, Sidebar, Button, Container, Icon } from 'semantic-ui-react'
 import windowSize from 'react-window-size';
 
 import Home from './Home'
@@ -12,11 +12,12 @@ import Blogs from './Blogs'
 
 class App extends Component {
   state = {
-    animation: 'push',
+    animation: 'overlay',
     direction: 'left',
     dimmed: false,
     visible: true,
-    buttonText: "Hide Menu"
+    buttonText: "Hide Menu",
+    sidebarSize: 'small'
   }
 
   hideOnMouseLeave = () => { this.setState({ visible: !this.state.visible }) }
@@ -27,7 +28,10 @@ class App extends Component {
     console.log(this.props.windowWidth, this.props.windowHeight)
     fetch("/testAPI")
       .then(res => res.json())
-      .then(res =>  console.log(res.express))
+      .then(res => console.log(res.express))
+    if (this.props.windowWidth < 769) {
+      this.setState({sidebarSize: 'very tiny'})
+    } 
   }
 
   showMenuForMobile = () => {
@@ -48,10 +52,12 @@ class App extends Component {
         {this.props.windowWidth < 769 ? 
           <div style={{ "margin-top": 7 + 'px', "margin-bottom": "-10px" }}>
             <Button.Group basic>
-              <Button
+              <Button icon
                 onClick={this.showMenuForMobile}
                 style={{"margin": 2 + 'px'}}
-                >{this.state.buttonText}</Button>
+              >
+              <Icon name='bars' />
+              </Button>
               {/* <Button>Two</Button>
               <Button>Three</Button> */}
             </Button.Group>
@@ -69,15 +75,13 @@ class App extends Component {
             inverted
             vertical
             visible={visible}
-            size={'small'}
+            size={this.state.sidebarSize}
           >
-            <Link to='/'>
+            
               <Image
               src={require('./images/profile/headshot.jpg')}
-              onClick={this.hideOnMouseLeave}
-              />
-            </Link>
-
+              onClick={this.hideOnMouseLeave} />
+        
             <Link to='/' className="item" >
               <i className="home icon"></i>
                 Home
