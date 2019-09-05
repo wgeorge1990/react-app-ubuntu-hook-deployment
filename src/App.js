@@ -87,7 +87,6 @@ class App extends Component {
             vertical
             visible={visible}
             size={this.state.sidebarSize} >
-            
             <Image
               src={require('./images/profile/headshot.jpg')}
               onClick={this.hideOnMouseLeave} />
