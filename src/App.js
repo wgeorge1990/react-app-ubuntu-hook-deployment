@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
-// import PropTypes from 'prop-types'
 import { Image, Menu, Segment, Sidebar, Button, Container, Icon } from 'semantic-ui-react'
 import windowSize from 'react-window-size';
 
@@ -20,64 +19,63 @@ class App extends Component {
     sidebarSize: 'small'
   }
 
-  hideOnMouseLeave = () => { this.setState({ visible: !this.state.visible }) }
+  hideOnMouseLeave = () => this.setState({ visible: !this.state.visible }) 
 
-  showSideBar = () => { this.setState({ visible: !this.state.visible }) }
+  showSideBar = () => this.setState({ visible: !this.state.visible }) 
   
   componentDidMount = () => {
     console.log(this.props.windowWidth, this.props.windowHeight)
-    fetch("/testAPI")
-      .then(res => res.json())
-      .then(res => console.log(res.express))
     if (this.props.windowWidth < 769) {
       this.setState({sidebarSize: 'mini'})
     } 
   }
 
   showMenuForMobile = () => {
-    if (this.state.visible) {
-      this.setState({visible: false, buttonText: "Show Menu"})
-    } else {
+    this.state.visible ?
+      this.setState({ visible: false, buttonText: "Show Menu" }) :
       this.setState({ visible: true, buttonText: "Hide Menu" })
-    }
   }
-    
+  
+  mobileMenuButton = () => (
+      this.props.windowWidth < 769 ?
+        <div style={{ "marginTop": 7 + 'px', "marginBottom": "-10px" }}>
+          <Button icon
+            onClick={this.showMenuForMobile}
+            style={{ "margin": 2 + 'px' }} >
+            <Icon name='bars' />
+          </Button>
+        </div> : null 
+  )
+
+  sidebarMenuItems = (array) => (
+    array.map(o => {
+      return (
+        <Menu.Item>
+          <div>
+              <Button circular color={o.colorName} icon={o.iconName} />
+          </div>
+        </Menu.Item>
+      )
+    })
+  )
+
+  socialMediaIcons = [
+    { colorName: 'twitter', iconName: 'twitter', link: 'www.twitter.com/wgeorgedev' },
+    { colorName: 'linkedin', iconName: 'linkedin' },
+    { colorName: 'google plus', iconName: 'mail' },
+    { colorName: 'purple', iconName: 'github' },
+    { colorName: 'grey', iconName: 'medium'}
+  ]
+
   render() {
     const { animation, dimmed, direction, visible } = this.state
     return (
       <Container
-        style={{ "width": "99%" }}
-        onMouseLeave={this.showSideBar}
-      >
-        {this.props.windowWidth < 769 ? 
-          <div style={{ "marginTop": 7 + 'px', "marginBottom": "-10px" }}>
-            
-              <Button icon
-                onClick={this.showMenuForMobile}
-                style={{"margin": 2 + 'px'}}
-              >
-              <Icon name='bars' />
-              </Button>
-{/*             
-            <Menu.Item>
-              <Button circular color='twitter' icon='twitter' />
-            </Menu.Item>
-            <Menu.Item>
-              <Button circular color='linkedin' icon='linkedin' />
-            </Menu.Item>
-            <Menu.Item>
-              <Button circular color='google plus' icon='mail' />
-            </Menu.Item>
-            <Menu.Item>
-              <Button circular color='purple' icon='github' />
-            </Menu.Item>
-            <Menu.Item>
-              <Button circular color='grey' icon='medium' />
-            </Menu.Item> */}
-
-          </div> : null} 
+        style={{ "width": "100%" }}
+        onMouseLeave={this.showSideBar} >
         
-        {/* {this.state.visible ? null : <Button onClick={this.hideOnMouseLeave}>Toggle Menu</Button>} */}
+        {this.mobileMenuButton()}
+
         <Sidebar.Pushable as={Segment} >
           <Sidebar
             onMouseLeave={this.hideOnMouseLeave}
@@ -89,9 +87,9 @@ class App extends Component {
             inverted
             vertical
             visible={visible}
-            size={this.state.sidebarSize}
-          >
-              <Image
+            size={this.state.sidebarSize} >
+            
+            <Image
               src={require('./images/profile/headshot.jpg')}
               onClick={this.hideOnMouseLeave} />
         
@@ -120,53 +118,20 @@ class App extends Component {
               Resume
             </Link>
 
-            <Menu.Item>
-              <div>
-                <Button circular color='twitter' icon='twitter' />
-              </div>
-            </Menu.Item>
-
-            <Menu.Item>
-              <div>
-                <Button circular color='linkedin' icon='linkedin' />
-              </div>
-            </Menu.Item>
-
-            <Menu.Item >
-              <div>
-                <Button circular color='google plus' icon='mail' />
-              </div>
-            </Menu.Item>
-
-            <Menu.Item>
-              <div>
-            <Button circular color='purple' icon='github' />
-            </div>
-            </Menu.Item>
-
-            <Menu.Item>
-              <div>
-                <Button circular color="grey" icon='medium' />
-              </div>
-            </Menu.Item>
-            
-
-            
-
+            {this.sidebarMenuItems(this.socialMediaIcons)}
 
           </Sidebar>
           
           <Sidebar.Pusher dimmed={dimmed && visible}>
-            <Segment basic
-              >
-               <Switch>
+            {/* <Segment basic > */}
+              <Switch>
                  <Route exact path='/' render={() => <Home /> } />
                  <Route exact path='/FineArt' render={()=> <FineArt /> } />
                  <Route exact path='/Development' render={() => <Development /> } />
                  <Route exact path='/Blogs' render={() => <Blogs /> } />
                  <Route exact path='/Resume' render={() => <Resume /> } />
               </Switch> 
-            </Segment>
+            {/* </Segment> */}
           </Sidebar.Pusher>
         </Sidebar.Pushable>
       </Container>
