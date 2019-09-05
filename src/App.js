@@ -12,7 +12,7 @@ import Blogs from './Blogs'
 
 class App extends Component {
   state = {
-    animation: 'scale down',
+    animation: 'push',
     direction: 'left',
     dimmed: false,
     visible: true,
@@ -25,9 +25,9 @@ class App extends Component {
   
   componentDidMount = () => {
     console.log(this.props.windowWidth, this.props.windowHeight)
-    fetch("http://localhost:5000/testAPI")
-      .then(res => res.text())
-      .then(res =>  console.log(res))
+    fetch("/testAPI")
+      .then(res => res.json())
+      .then(res =>  console.log(res.express))
   }
 
   showMenuForMobile = () => {
