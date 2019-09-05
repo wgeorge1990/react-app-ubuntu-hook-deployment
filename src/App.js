@@ -30,7 +30,7 @@ class App extends Component {
       .then(res => res.json())
       .then(res => console.log(res.express))
     if (this.props.windowWidth < 769) {
-      this.setState({sidebarSize: 'very tiny'})
+      this.setState({sidebarSize: 'mini'})
     } 
   }
 
@@ -50,17 +50,31 @@ class App extends Component {
         onMouseLeave={this.showSideBar}
       >
         {this.props.windowWidth < 769 ? 
-          <div style={{ "margin-top": 7 + 'px', "margin-bottom": "-10px" }}>
-            <Button.Group basic>
+          <div style={{ "marginTop": 7 + 'px', "marginBottom": "-10px" }}>
+            
               <Button icon
                 onClick={this.showMenuForMobile}
                 style={{"margin": 2 + 'px'}}
               >
               <Icon name='bars' />
               </Button>
-              {/* <Button>Two</Button>
-              <Button>Three</Button> */}
-            </Button.Group>
+{/*             
+            <Menu.Item>
+              <Button circular color='twitter' icon='twitter' />
+            </Menu.Item>
+            <Menu.Item>
+              <Button circular color='linkedin' icon='linkedin' />
+            </Menu.Item>
+            <Menu.Item>
+              <Button circular color='google plus' icon='mail' />
+            </Menu.Item>
+            <Menu.Item>
+              <Button circular color='purple' icon='github' />
+            </Menu.Item>
+            <Menu.Item>
+              <Button circular color='grey' icon='medium' />
+            </Menu.Item> */}
+
           </div> : null} 
         
         {/* {this.state.visible ? null : <Button onClick={this.hideOnMouseLeave}>Toggle Menu</Button>} */}
@@ -77,7 +91,6 @@ class App extends Component {
             visible={visible}
             size={this.state.sidebarSize}
           >
-            
               <Image
               src={require('./images/profile/headshot.jpg')}
               onClick={this.hideOnMouseLeave} />
@@ -106,6 +119,41 @@ class App extends Component {
               <i className="pencil icon"></i>
               Resume
             </Link>
+
+            <Menu.Item>
+              <div>
+                <Button circular color='twitter' icon='twitter' />
+              </div>
+            </Menu.Item>
+
+            <Menu.Item>
+              <div>
+                <Button circular color='linkedin' icon='linkedin' />
+              </div>
+            </Menu.Item>
+
+            <Menu.Item >
+              <div>
+                <Button circular color='google plus' icon='mail' />
+              </div>
+            </Menu.Item>
+
+            <Menu.Item>
+              <div>
+            <Button circular color='purple' icon='github' />
+            </div>
+            </Menu.Item>
+
+            <Menu.Item>
+              <div>
+                <Button circular color="grey" icon='medium' />
+              </div>
+            </Menu.Item>
+            
+
+            
+
+
           </Sidebar>
           
           <Sidebar.Pusher dimmed={dimmed && visible}>
