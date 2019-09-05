@@ -66,10 +66,7 @@ class App extends Component {
     { colorName: 'purple', iconName: 'github' },
     { colorName: 'grey', iconName: 'medium'}
   ]
-
-
   
-
   render() {
     const { animation, dimmed, direction, visible } = this.state
     return (
