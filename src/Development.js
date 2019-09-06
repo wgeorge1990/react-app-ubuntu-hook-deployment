@@ -3,8 +3,7 @@ import { Image, Grid } from 'semantic-ui-react'
 
 export default function Development() {
     return (
-        <div>
-            <Grid>
+        <Grid>
                 <Grid.Column width={4}>
                     <Image src={require('./images/projects/artshare/IMG_1229.PNG')} />
                 </Grid.Column>
@@ -69,6 +68,5 @@ export default function Development() {
                     <Image src={require('./images/placeholders/media-paragraph.png')} />
                 </Grid.Column>
             </Grid>
-        </div>
     )
 }

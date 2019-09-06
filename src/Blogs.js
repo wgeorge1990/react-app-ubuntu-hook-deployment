@@ -1,21 +1,21 @@
 import React from 'react'
-import { Segment, Grid } from 'semantic-ui-react'
+import { Segment, Grid,Container } from 'semantic-ui-react'
 import Iframe from 'react-iframe'
 
-export default function Blogs(props) {
+export default function Blogs() {
     return (
-        <div>
             <Grid>
-                <Segment style={{ "width": "1850px", "height": "1700px", "background": 'black' }}>
+                <Segment style={{ "width": "100%", "height": "1800px"}}>
                     <Iframe url="https://medium.com/@wgeorgedev"
-                        width="100%"
-                        height="100%"
+                        height="1800px"
                         id="myId"
                         className="myClassname"
                         display="initial"
-                        position="relative" />
+                        position="relative"
+                        allowFullScreen
+                         />
                 </Segment>
             </Grid>
-        </div>
+
     )
 }
