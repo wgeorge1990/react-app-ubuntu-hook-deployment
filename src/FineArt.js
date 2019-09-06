@@ -3,7 +3,7 @@ import { Image, Grid } from 'semantic-ui-react'
 
 export default function FineArt() {
     return (
-        <div>
+      
             <Grid>
                 {/* This is where the menu buttons will go */}
                 {/* <Grid.Row columns={1} centered>
@@ -76,6 +76,6 @@ export default function FineArt() {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
-        </div>
+        
     )
 }

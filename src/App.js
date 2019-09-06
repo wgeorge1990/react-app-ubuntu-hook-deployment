@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link, Redirect } from 'react-router-dom'
-import { Image, Menu, Segment, Sidebar, Button, Container, Icon,  Grid } from 'semantic-ui-react'
+import { Image, Menu, Sidebar, Button, Container, Icon,  Grid } from 'semantic-ui-react'
 import windowSize from 'react-window-size';
 import {withRouter} from 'react-router'
 
@@ -8,8 +8,6 @@ import Home from './Home'
 import FineArt from './FineArt'
 import Resume from './Resume'
 import Development from './Development'
-import Blogs from './Blogs'
-import { tsImportEqualsDeclaration } from '@babel/types';
 
 class App extends Component {
   state = {
@@ -44,10 +42,12 @@ class App extends Component {
   render() {
     const { animation, dimmed, direction, visible } = this.state
     return (
-      <Container
-        style={{ "width": "100%" }}
-        >
-        <div style={{ "marginTop": 7 + 'px', "marginBottom": "-10px" }}>
+      // <Container
+      //   style={{ "width": "100%" , "background": 'black'}}
+      //   >
+      <Container style={{ 'width': '100%' }}>
+      
+        {/* <Button.Group>
           <Button icon
             onClick={this.toggleMenu}
             style={{ "margin": 2 + 'px' }} >
@@ -63,9 +63,22 @@ class App extends Component {
             style={{ "margin": 2 + 'px' }} >
             <Icon name='arrow circle right' />
           </Button>
-        </div>
+        </Button.Group> */}
 
-        <Sidebar.Pushable as={Segment} >
+        <Menu fluid widths={3}>
+          <Menu.Item onClick={this.toggleMenu}>
+            <Icon name='bars' />
+          </Menu.Item>
+          <Menu.Item onClick={this.back}>
+            <Icon name='arrow circle left' />
+          </Menu.Item>
+          <Menu.Item onClick={this.forward}>
+            <Icon name='arrow circle right' />
+          </Menu.Item>
+        </Menu>
+        
+
+        <Sidebar.Pushable as={Container} fluid>
           <Sidebar
             // onMouseLeave={this.toggleMenu}
             style={{ "padding": "10px" }}
@@ -175,7 +188,7 @@ class App extends Component {
           <Sidebar.Pusher dimmed={dimmed && visible} >
             <Grid>
               <Grid.Row stretched>
-                <Grid.Column width={1}>
+                <Grid.Column width={1} >
                   
                 </Grid.Column>
                 <Grid.Column width={14}>
@@ -188,17 +201,15 @@ class App extends Component {
                     <Route exact path='twitter' render={() => <Redirect to='twitter.com/wgeorgedev' />} />
                   </Switch> 
                 </Grid.Column>
-                <Grid.Column width={1}> 
+                <Grid.Column width={1} > 
 
                 </Grid.Column>
               </Grid.Row>
           </Grid>
-
-             
-            
           </Sidebar.Pusher>
-        </Sidebar.Pushable>
-      </Container>
+      </Sidebar.Pushable>
+      
+       </Container>
     )
   }
 }

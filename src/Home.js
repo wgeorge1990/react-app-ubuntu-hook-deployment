@@ -1,33 +1,27 @@
 import React from 'react'
-import { Segment, Grid, Header,Image, Icon } from 'semantic-ui-react'
+import { Segment, Grid, Header, Image } from 'semantic-ui-react'
 
 export default function Home() {
     return (
-        <div>
             <Grid>
-                <Grid.Row>
-                    <Grid.Column>
-                        <div>
-                            <Header as='h2' icon textAlign='center'>
-                                <Image src={require('./images/profile/headshot.jpg')} size='medium' circular />
-                                <Header.Content>Friends</Header.Content>
-                            </Header>
-                            <Image
-                                centered
-                                size='large'
-                                src='https://react.semantic-ui.com/images/wireframe/centered-paragraph.png'
-                            />
-                        </div>
+                <Grid.Row columns={1} >
+                    <Grid.Column style={{ "background": "#ededeb", 'padding': '20px' }}>
+                        <Image
+                            src={require('./images/profile/IMG_1327.JPG')}
+                            style={{'width': "10%"}}
+                            circular
+                            centered />
+                    </Grid.Column>
+                    <Grid.Column style={{ "background": "#ededeb" }}>
+                        <Header as='h1' textAlign='center' >
+                            <Header.Content>William George</Header.Content>
+                            {/* <h3>Sofware Engineer, Graphic Artist, and life long learner</h3> */}
+                            <Header.Subheader >Sofware Engineer, Graphic Artist, and life long learner</Header.Subheader>
+                        </Header>
+                       
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row>
-                    <Grid.Column>
-                        <Segment compact style={{ "width": "1850px", "height": "1700px", "background": 'black' }}>
-                        </Segment>
-                    </Grid.Column>
-                </Grid.Row>
-            
             </Grid>
-        </div>
+      
     )
 }
