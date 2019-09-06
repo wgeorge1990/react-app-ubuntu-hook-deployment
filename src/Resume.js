@@ -19,31 +19,17 @@ export default class Resume extends React.Component {
     }
 
     render() {
-        
+
         const { pageNumber, numPages } = this.state;
         return (
         //    <Container style={{'width': '100%', 'height': '100%'}}>
             <div style={{ 'height': '1700px' }}>
-                <Grid>
-                    <Grid.Row>
-                        <Grid.Column width={4}>
-                            
-                        </Grid.Column>
-                        <Grid.Column width={10}>
-                            <Document
-                                file={require('./images/pdf/sampleResume.pdf')}
-                                onLoadSuccess={this.onDocumentLoadSuccess}
-                            >
-                                <Page pageNumber={pageNumber} />
-                            </Document>
-                            <p>Page {pageNumber} of {numPages}</p>
-                        </Grid.Column>
-                        <Grid.Column width={2}>
-
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-                
+                <Document
+                    file={require('./images/pdf/sampleResume.pdf')}
+                    onLoadSuccess={this.onDocumentLoadSuccess}
+                >
+                    <Page pageNumber={pageNumber} />
+                </Document>
              </div>
         )
     }
