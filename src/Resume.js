@@ -19,6 +19,7 @@ export default class Resume extends React.Component {
     }
 
     render() {
+        
         const { pageNumber, numPages } = this.state;
         return (
         //    <Container style={{'width': '100%', 'height': '100%'}}>
