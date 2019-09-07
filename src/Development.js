@@ -33,6 +33,7 @@ export default function Development() {
                 </Grid.Column>
                 <Grid.Column style={{ 'padding': '30px' }} width={9}>
                 <a href='https://dreamer-board-react.herokuapp.com'><h1 style={{ 'textAlign': 'center' }}>DreamerBoard</h1></a>
+                <h3>DreamerBoard is a playful app that allows users to search for images and then drag them onto a rearrangable board.</h3>
                 </Grid.Column>
                 <Grid.Column style={{ 'padding': '30px' }} width={3}>
                    <Embed width='100%'/>
