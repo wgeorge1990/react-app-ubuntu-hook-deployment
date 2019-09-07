@@ -26,8 +26,7 @@ export default class Resume extends React.Component {
             <div style={{ 'height': '1700px' }}>
                 <Document
                     file={require('./images/pdf/sampleResume.pdf')}
-                    onLoadSuccess={this.onDocumentLoadSuccess}
-                >
+                    onLoadSuccess={this.onDocumentLoadSuccess}>
                     <Page pageNumber={pageNumber} />
                 </Document>
              </div>
