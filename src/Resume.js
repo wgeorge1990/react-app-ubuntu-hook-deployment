@@ -1,9 +1,5 @@
 import React from 'react'
 import { Segment, Container, Grid } from 'semantic-ui-react'
-import { Document, Page } from 'react-pdf';
-// import { Document, Page } from 'react-pdf/dist/entry.webpack';
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-import {pdfjs} from 'react-pdf'
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
