@@ -1,8 +1,4 @@
 import React from 'react'
-import { Segment, Container, Grid } from 'semantic-ui-react'
-
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export default class Resume extends React.Component {
     state = {
