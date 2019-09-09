@@ -22,8 +22,8 @@ export default function Development() {
             <Grid.Column style={{ 'padding': '30px' }} width={9}>
                 {/* <Image src={require('./images/placeholders/paragraph.png')} /> */}
                 <a href="https://space-picture-react.herokuapp.com/"><h1 style={{ 'textAlign': 'center' }}>SpacePicture</h1></a>
-                <h5>SpacePicture was designed for a single purpose: To explore Nasa's incredible photography of outer space. This app takes in a specific month and year and then returns a photo for each day in that month by iterating through the month and fetching photos from the Nasa API. Each photo has a detailed descrition of the capture written by Nasa itself.
-                </h5>
+                <h4>SpacePicture was designed for a single purpose: To explore Nasa's incredible photography of outer space. This app takes in a specific month and year and then returns a photo for each day in that month by iterating through the month and fetching photos from the Nasa API. Each photo has a detailed descrition of the capture written by Nasa itself.
+                </h4>
             </Grid.Column>
                 <Grid.Column style={{ 'padding': '30px' }} width={3}>
                    <Embed width='100%'/>
@@ -33,7 +33,7 @@ export default function Development() {
                 </Grid.Column>
                 <Grid.Column style={{ 'padding': '30px' }} width={9}>
                 <a href='https://dreamer-board-react.herokuapp.com'><h1 style={{ 'textAlign': 'center' }}>DreamerBoard</h1></a>
-                <h3>DreamerBoard is a playful app that allows users to search for images and then drag them onto a rearrangable board.</h3>
+                <h4>DreamerBoard is a playful app that allows users to search for images and then drag them onto a rearrangable board.</h4>
                 </Grid.Column>
                 <Grid.Column style={{ 'padding': '30px' }} width={3}>
                    <Embed width='100%'/>

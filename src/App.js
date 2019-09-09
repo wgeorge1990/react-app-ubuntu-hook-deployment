@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Switch, Route, Link, Redirect } from 'react-router-dom'
-import { Image, Menu, Sidebar, Button, Container, Icon,  Grid } from 'semantic-ui-react'
+import { Image, Menu, Sidebar, Button, Container, Icon,  Grid, Header } from 'semantic-ui-react'
 import windowSize from 'react-window-size';
-import {withRouter} from 'react-router'
+import { withRouter } from 'react-router'
+// import Mailto from 'react-protected-mailto'
 
 import Home from './Home'
 import FineArt from './FineArt'
@@ -42,29 +43,8 @@ class App extends Component {
   render() {
     const { animation, dimmed, direction, visible } = this.state
     return (
-      // <Container
-      //   style={{ "width": "100%" , "background": 'black'}}
-      //   >
       <Container style={{ 'width': '100%' }}>
-      
-        {/* <Button.Group>
-          <Button icon
-            onClick={this.toggleMenu}
-            style={{ "margin": 2 + 'px' }} >
-            <Icon name='bars' />
-          </Button>
-          <Button icon
-            onClick={this.back}
-            style={{ "margin": 2 + 'px' }} >
-            <Icon name='arrow circle left' />
-          </Button>
-          <Button icon
-            onClick={this.forward}
-            style={{ "margin": 2 + 'px' }} >
-            <Icon name='arrow circle right' />
-          </Button>
-        </Button.Group> */}
-
+    
         <Menu fluid widths={3}>
           <Menu.Item onClick={this.toggleMenu}>
             <Icon name='bars' />
@@ -117,15 +97,7 @@ class App extends Component {
               <i className="computer icon"></i>
               Development
             </Link>
-          
-            {/* <Link
-              to="/Blogs"
-              className="item"
-              onClick={this.toggleMenu} >
-              <i className="smile icon"></i>
-              Blogs
-            </Link> */}
-
+  
             <Link
               to="/Resume"
               className="item"
@@ -135,73 +107,91 @@ class App extends Component {
             </Link>
 
             <Menu.Item>
-              <div>
+              <a href='https://github.com/wgeorge1990'>
                 <Button
                   circular
                   color="purple"
                   icon="github"
                 />
-              </div>
+              </a>
             </Menu.Item>
 
             <Menu.Item>
-              <div>
+              <a href='https://www.linkedin.com/in/wgdevelopment/'>
                 <Button
                   circular
                   color="linkedin"
                   icon="linkedin"
                 />
-              </div>
+              </a>
             </Menu.Item>
 
             <Menu.Item>
-              <div>
+              <a href='https://medium.com/@wgeorgedev'>
                 <Button
                   circular
                   color="grey"
                   icon="medium"
                 />
-              </div>
+              </a>
             </Menu.Item>
             
             <Menu.Item>
-              <div>
+              <a href="mailto:wgeorgedev@gmail.com">
                 <Button
                   circular
                   color="google plus"
                   icon="mail"
-                  />
-              </div>
+                />
+              </a>
             </Menu.Item>
            
             <Menu.Item>
-              <div>
+                <a href="https://twitter.com/WGeorgeDev">
                 <Button
                   circular
                   color="twitter"
                   icon="twitter"
                   />
-              </div>
+                </a>
             </Menu.Item>
           </Sidebar>
           
           <Sidebar.Pusher dimmed={dimmed && visible} >
             <Grid>
+              <Grid>
+                <Grid.Row columns={1} >
+                  <Grid.Column style={{ 'padding': '20px' }}>
+                    <Image
+                      src={require('./images/profile/IMG_1327.JPG')}
+                      style={{ 'width': "10%" }}
+                      circular
+                      centered />
+                  </Grid.Column>
+                  <Grid.Column style={{}}>
+                    <Header as='h1' textAlign='center' >
+                      <Header.Content>William George</Header.Content>
+                      {/* <h3>Sofware Engineer, Graphic Artist, and life long learner</h3> */}
+                      <Header.Subheader >Sofware Engineer, Graphic Artist, and life long learner</Header.Subheader>
+                    </Header>
+
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
               <Grid.Row stretched>
-                <Grid.Column width={1} >
+                <Grid.Column width={1} style={{}}>
                   
                 </Grid.Column>
                 <Grid.Column width={14}>
                   <Switch>
-                    <Route exact path='/' render={() => <Home />} />
+                    <Route exact path='/' render={() => <FineArt />} />
                     <Route exact path='/FineArt' render={() => <FineArt />} />
                     <Route exact path='/Development' render={() => <Development />} />
                     {/* <Route exact path='/Blogs' render={() => <Blogs />} /> */}
                     <Route exact path='/Resume' render={() => <Resume />} />
-                    <Route exact path='twitter' render={() => <Redirect to='twitter.com/wgeorgedev' />} />
                   </Switch> 
                 </Grid.Column>
-                <Grid.Column width={1} > 
+                <Grid.Column width={1} style={{ }}> 
 
                 </Grid.Column>
               </Grid.Row>

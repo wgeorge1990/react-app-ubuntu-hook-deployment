@@ -23,12 +23,8 @@ export default class Resume extends React.Component {
         const { pageNumber, numPages } = this.state;
         return (
         //    <Container style={{'width': '100%', 'height': '100%'}}>
-            <div style={{ 'height': '1700px' }}>
-                <Document
-                    file={require('./images/pdf/sampleResume.pdf')}
-                    onLoadSuccess={this.onDocumentLoadSuccess}>
-                    <Page pageNumber={pageNumber} />
-                </Document>
+            <div style={{ "background": "#ededeb", "height": "1700px"}}>
+               
              </div>
         )
     }

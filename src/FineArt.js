@@ -4,7 +4,7 @@ import { Image, Grid } from 'semantic-ui-react'
 export default function FineArt() {
     return (
       
-            <Grid>
+        <Grid style={{}}>
                 {/* This is where the menu buttons will go */}
                 {/* <Grid.Row columns={1} centered>
                     <Grid.Column>
