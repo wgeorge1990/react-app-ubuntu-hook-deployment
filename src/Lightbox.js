@@ -28,12 +28,6 @@ export default class LightboxExample extends Component {
         };
     }
 
-    componentDidMount() {
-        this.setState({
-            isOpen: this.props.isOpen
-        })
-    }
-
     render() {
         const { photoIndex, isOpen } = this.state;
 
