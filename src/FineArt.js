@@ -1,24 +1,25 @@
 import React from 'react'
-import { Image, Grid } from 'semantic-ui-react'
+import { Image, Grid, Container } from 'semantic-ui-react'
+import Lightbox from './Lightbox'
 
-export default function FineArt() {
-    return (
-      
-        <Grid style={{}}>
-                {/* This is where the menu buttons will go */}
-                {/* <Grid.Row columns={1} centered>
-                    <Grid.Column>
-                        
-                    </Grid.Column>
-                </Grid.Row> */}
+export default class FineArt extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            
+        }
+    }
+    render() {
+        return (
 
-                {/* <Grid.Row columns={1} centered>
+            <Grid >
+                <Grid.Row columns={1} centered>
                     <Grid.Column>
                         <Container>
-                            <Image fluid src={require('./images/placeholders/image.png')} />
+                            <Lightbox />
                         </Container>
                     </Grid.Column>
-                </Grid.Row> */}
+                </Grid.Row>
 
                 <Grid.Row columns={3}>
                     <Grid.Column>
@@ -77,5 +78,6 @@ export default function FineArt() {
                 </Grid.Row>
             </Grid>
         
-    )
+        )
+    }
 }
