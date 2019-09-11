@@ -105,7 +105,9 @@ class App extends Component {
             </Link>
 
             <Menu.Item>
-              <a href='https://github.com/wgeorge1990'>
+              <a
+                target="_blank"
+                href='https://github.com/wgeorge1990'>
                 <Button
                   circular
                   color="purple"
@@ -115,7 +117,9 @@ class App extends Component {
             </Menu.Item>
 
             <Menu.Item>
-              <a href='https://www.linkedin.com/in/wgdevelopment/'>
+              <a
+                target="_blank"
+                href='https://www.linkedin.com/in/wgdevelopment/'>
                 <Button
                   circular
                   color="linkedin"
@@ -125,7 +129,9 @@ class App extends Component {
             </Menu.Item>
 
             <Menu.Item>
-              <a href='https://medium.com/@wgeorgedev'>
+              <a
+                target="_blank"
+                href='https://medium.com/@wgeorgedev'>
                 <Button
                   circular
                   color="grey"
@@ -135,7 +141,8 @@ class App extends Component {
             </Menu.Item>
             
             <Menu.Item>
-              <a href="mailto:wgeorgedev@gmail.com">
+              <a
+                href="mailto:wgeorgedev@gmail.com">
                 <Button
                   circular
                   color="google plus"
@@ -145,7 +152,9 @@ class App extends Component {
             </Menu.Item>
            
             <Menu.Item>
-                <a href="https://twitter.com/WGeorgeDev">
+              <a
+                target="_blank"
+                href="https://twitter.com/WGeorgeDev">
                 <Button
                   circular
                   color="twitter"
