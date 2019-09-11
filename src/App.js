@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import { Switch, Route, Link, Redirect } from 'react-router-dom'
+import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom'
 import { Image, Menu, Sidebar, Button, Container, Icon,  Grid, Header } from 'semantic-ui-react'
 import windowSize from 'react-window-size';
-import { withRouter } from 'react-router'
-// import Mailto from 'react-protected-mailto'
 
 import Home from './Home'
 import FineArt from './FineArt'
