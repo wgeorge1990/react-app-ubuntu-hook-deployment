@@ -2,6 +2,7 @@ import React from 'react'
 import { Image, Grid, Embed } from 'semantic-ui-react'
 import '../node_modules/video-react/dist/video-react.css'
 import { Player } from 'video-react';
+//Need to figure out how to get links to dropbox videos to work with player
 
 export default function Development(props) {
     return (
