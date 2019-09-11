@@ -17,7 +17,7 @@ export default function Development(props) {
                     Technologies used but not limited to include: React.js, Ruby on Rails, Postgresql for database, React-Router for navigation, React-Redux for centralized state management, Semantic-UI-React for visual styling, JWT encryption and Bcrypt for user Auth, Active storage and AWS s3 buckets for image storage.</h4>
                 </Grid.Column>
                 <Grid.Column width={6}>
-                <Player ><source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" /></Player >
+                <Player ><source src={require('./images/projects/artshare/artshareDemo720.mov')} /></Player >
                 </Grid.Column>
 
                 <Grid.Column  width={4}>
