@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom'
+import { Switch, Route, Link, withRouter } from 'react-router-dom'
 import { Image, Menu, Sidebar, Button, Container, Icon,  Grid, Header } from 'semantic-ui-react'
 import windowSize from 'react-window-size';
 
-import Home from './Home'
 import FineArt from './FineArt'
 import Resume from './Resume'
 import Development from './Development'
