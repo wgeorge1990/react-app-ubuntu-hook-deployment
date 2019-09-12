@@ -4,6 +4,7 @@ import '../node_modules/video-react/dist/video-react.css'
 import { Player } from 'video-react';
 //Need to figure out how to get links to dropbox videos to work with player
 
+
 export default function Development(props) {
     return (
         <Grid>
@@ -30,7 +31,7 @@ export default function Development(props) {
                 </h4>
                 </Grid.Column>
                 <Grid.Column width={6}>
-                   <Embed width='100%'/>
+                <Player ><source src={require('./images/projects/artshare/artshareDemo720.mov')} /></Player >
                 </Grid.Column>
             
                 <Grid.Column  width={4}>

@@ -107,6 +107,7 @@ class App extends Component {
             <Menu.Item>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href='https://github.com/wgeorge1990'>
                 <Button
                   circular
@@ -119,6 +120,7 @@ class App extends Component {
             <Menu.Item>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href='https://www.linkedin.com/in/wgdevelopment/'>
                 <Button
                   circular
@@ -131,6 +133,7 @@ class App extends Component {
             <Menu.Item>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href='https://medium.com/@wgeorgedev'>
                 <Button
                   circular
@@ -154,6 +157,7 @@ class App extends Component {
             <Menu.Item>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://twitter.com/WGeorgeDev">
                 <Button
                   circular
