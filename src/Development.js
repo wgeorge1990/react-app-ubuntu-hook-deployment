@@ -2,7 +2,6 @@ import React from 'react'
 import { Image, Grid, Responsive, Container, Segment, Header } from 'semantic-ui-react'
 import '../node_modules/video-react/dist/video-react.css'
 import { Player } from 'video-react';
-//Need to figure out how to get links to dropbox videos to work with player
 
 
 export default function Development(props) {
@@ -95,7 +94,7 @@ export default function Development(props) {
                             <Player ><source src={null} /></Player >
                             </Grid.Column>
                         </Grid>
-                        
+
                         </Segment>
                         <Grid.Column  width={4}>
                             <Image src={require('./images/placeholders/image.png')} />
@@ -174,6 +173,14 @@ export default function Development(props) {
                                 <a style={{ "textAlign": "center" }} href={spacePicture.liveLink} >Live Project Link</a>
                             </Grid.Column>
                         </Grid.Row>
+                    </Grid>
+                </Segment>
+            </Responsive>
+
+            <Responsive as={Container} style={{ 'width': '100%' }} maxWidth={400}>
+                <Segment placeholder >
+                    <Grid columns={1} textAlign='center'>
+
                     </Grid>
                 </Segment>
             </Responsive>
