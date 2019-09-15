@@ -10,7 +10,7 @@ export default function Development(props) {
         title: "ArtShare",
         description: "Art Share is a full-stack single-page web application built for artists of any level to showcase their work. Technologies used but not limited to include: React.js, Ruby on Rails, Postgresql for database, React-Router for navigation, React-Redux for centralized state management, Semantic-UI-React for visual styling, JWT encryption and Bcrypt for user Auth, Active storage and AWS s3 buckets for image upload and storage.",
         image: require('./images/projects/artshare/IMG_1229.PNG'),
-        video: require('./images/projects/artshare/artshareDemo720.mov'),
+        video: require('./images/projects/artshare/artshareDemo.mp4'),
         liveLink: "https://art-share-react.herokuapp.com/Login"
     }
 
@@ -26,7 +26,7 @@ export default function Development(props) {
         title: "DreamBoard",
         description: "DreamBoard is a playful app that allows users to search for images and then selected images to import into the interactive board. Once image has been added to board it can be rearranged and resized.",
         image: require("./images/projects/artshare/Dreamer-Child.jpg"),
-        video: require('./images/projects/dreamBoard/DreamBoardSmall copy.mov'),
+        video: require('./images/projects/dreamBoard/DreamBoardBestVersion.mov'),
         liveLink: "https://dreamer-board-react.herokuapp.com"
     }
 
