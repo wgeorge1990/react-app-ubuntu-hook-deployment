@@ -34,7 +34,7 @@ export default function Development(props) {
         title: "Portfolio",
         description: "My portfolio app is a one stop shop on me. Here viewers can find my ongoing development projects, my fine art, my resume, links to my Github, Linkedin, Email, and Medium account. The application itself is built with React,React Router, and several other libraries. It is being hosted on my personal Linux system droplet through DigitalOcean. I have configured automatic redeployment using webhooks written in Go, Nginx server, and custom written scripts. When I push a change from my local project to it's Github master, webhooks trigger and start a pull and rebuild on Linux Server which then hosts the build file through my custom domain that is registered to my servers Ip Address. I have built the app responsively for desktops, ipads/ medium touch screens, and phones. Application is currently under development.",
         image: require('./images/projects/portfolio/maxresdefault.jpg'),
-        video: 'still need video',
+        video: require('./images/projects/portfolio/PortfolioDemo720.mov'),
         liveLink: 'https://wgeorgedev.com'
     }
 
@@ -102,7 +102,7 @@ export default function Development(props) {
                                     <h4>{portfolio.description}</h4>
                                 </Grid.Column>
                                 <Grid.Column width={6}>
-                                    <Player ><source src={null} /></Player >
+                                    <Player ><source src={portfolio.video} /></Player >
                                 </Grid.Column>
                             </Grid>
                         </Segment>
