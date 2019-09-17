@@ -74,7 +74,7 @@ class App extends Component {
                   centered
                   circular
                   size='mini'
-                  src={require('./images/profile/headshot.jpg')}
+                  src={require('./images/profile/IMG_1327.JPG')}
                       onClick={this.toggleMenu} />
               </Link>
             </Menu.Item>
