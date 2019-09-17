@@ -78,6 +78,7 @@ class App extends Component {
                       onClick={this.toggleMenu} />
               </Link>
             </Menu.Item>
+            
 
             <Link
               to='/FineArt'
