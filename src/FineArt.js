@@ -63,9 +63,6 @@ export default class FineArt extends React.Component {
                     <Grid.Column>
                         <Container>
                             <div>
-                                {/* <button type="button" onClick={() => this.setState({ isOpen: true })}>
-                                    Open Lightbox
-        </button> */}
                                 {isOpen && (
                                     <Lightbox
                                         mainSrc={this.images[photoIndex]}

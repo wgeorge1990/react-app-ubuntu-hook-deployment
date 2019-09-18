@@ -114,24 +114,27 @@ export default function Development(props) {
                 </Responsive>
                 
                     {/* Second responsive handles smaller screens */}
-                    <Responsive as={Container} style={{'width': '100%'}} maxWidth={900}>
+                <Responsive as={Container} style={{ 'width': '100%' }} minWidth={551} maxWidth={900}>
                         <Segment placeholder >
-                        <Grid columns={2}  textAlign='center'>
+                        <Grid columns={2}  divided textAlign='center'>
                             {/* <Divider vertical></Divider> */}
-                            <Grid.Row verticalAlign='middle'>
-                                <Grid.Column>
+                            <Grid.Row verticalAlign='middle' stretched>
+                                <Grid.Column width='5'>
                                     <Header >
                                     ArtShare
                                     </Header>
                                     <Image src={artShare.image} />
-                                    
                                 </Grid.Column>
-                                <Grid.Column>
-                                    <Header>
-                                    Description
+                                <Grid.Column width='11'>
+                                    <Segment><Header>
+                                        Description
                                     </Header>
-                                    <h4>{artShare.description}</h4>
-                                    <a style={{ "textAlign": "center" }} href={artShare.liveLink} >Live Project Link</a>
+                                        <h4>{artShare.description}</h4>
+                                        <a style={{ "textAlign": "center" }} href={artShare.liveLink} >Live Project Link</a></Segment>
+                                    <Segment>
+                                        <Player ><source src={artShare.video} /></Player >
+                                    </Segment>
+                                    
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
@@ -202,13 +205,12 @@ export default function Development(props) {
                             </Grid.Row>
                         </Grid>
                     </Segment>
-
                 </Responsive>
 
-                <Responsive as={Container} style={{ 'width': '100%' }} maxWidth={400}>
+                <Responsive as={Container} style={{ 'width': '100%' }} maxWidth={550}>
                     <Segment placeholder >
                         <Grid columns={1} textAlign='center'>
-
+                            Cell phone responsiveness for development section is on its way. In the meantime rotate your phone display or use a device with a wider screen. Thank you.
                         </Grid>
                     </Segment>
                 </Responsive>
