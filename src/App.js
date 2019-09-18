@@ -3,6 +3,7 @@ import { Switch, Route, Link, withRouter } from 'react-router-dom'
 import { Image, Menu, Sidebar, Button, Container, Icon,  Grid, Header } from 'semantic-ui-react'
 import windowSize from 'react-window-size';
 
+import Home from './Home'
 import FineArt from './FineArt'
 import Resume from './Resume'
 import Development from './Development'
@@ -78,7 +79,7 @@ class App extends Component {
                       onClick={this.toggleMenu} />
               </Link>
             </Menu.Item>
-            
+
 
             <Link
               to='/FineArt'
@@ -195,7 +196,7 @@ class App extends Component {
                 </Grid.Column>
                 <Grid.Column width={14}>
                   <Switch>
-                    <Route exact path='/' render={() => <FineArt />} />
+                    <Route exact path='/' render={() => <Home />} />
                     <Route exact path='/FineArt' render={() => <FineArt />} />
                     <Route exact path='/Development' render={() => <Development />} />
                     {/* <Route exact path='/Blogs' render={() => <Blogs />} /> */}
