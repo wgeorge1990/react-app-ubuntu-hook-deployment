@@ -17,7 +17,8 @@ export default function Development(props) {
 
     let spacePicture = {
         title: "SpacePicture",
-        description: "SpacePicture creates a channel for users to experience Nasa's incredible photography of outer space. This app takes in a specific month and year and then returns a photo for each day in that month by iterating through the month and fetching photos from the Nasa API. Each photo has a title and a detailed description describing the capture. Technologies used include React, React Hooks, Semantic-ui-React, and a JSON server. I plan to add features and in doing so will use Express and MongoDB to handle the backend. Application is currently under development.",
+        // description: "SpacePicture creates a channel for users to experience Nasa's incredible photography of outer space. This app takes in a specific month and year and then returns a photo for each day in that month by iterating through the month and fetching photos from the Nasa API. Each photo has a title and a detailed description describing the capture. Technologies used include React, React Hooks, Semantic-ui-React, and a JSON server. I plan to add features and in doing so will use Express and MongoDB to handle the backend. Application is currently under development.",
+        description: "Developed single page web application that allows users to explore Nasa large photography collection based on year and month. Implemented React Hooks and functional components to optimize applications performance. Leveraged knowledge of Api's to fetch JSON objects from Nasa and render their images attributes to React's virtual DOM. Utilized: JavaScript; React; React Hooks; JSON; Semantic UI; Node.js; Git",
         image: require('./images/projects/artshare/nasa-gallery.jpg.optimal.jpg'),
         video: require('./images/projects/spacepictures/Nasa.mp4'),
         liveLink: "https://space-picture-react.herokuapp.com/"
@@ -25,7 +26,8 @@ export default function Development(props) {
 
     let DreamerBoard = {
         title: "DreamBoard",
-        description: "DreamBoard is a playful app that allows users to search for images and then selected images to import into the interactive board. Once image has been added to board it can be rearranged and resized. Application is currently under development.",
+        // description: "DreamBoard is a playful app that allows users to search for images and then selected images to import into the interactive board. Once image has been added to board it can be rearranged and resized. Application is currently under development.",
+        description: "Developed web app that allows users to create image collages by utilizing a library called React-Grid-Layout. Every new year my father and I would create a collage and call it a dream board.They represented the things we wished for in the new year.This application is directly inspired from this tradition. Utilized: JavaScript; React; Router; Redux; Node.js; React-Grid-Layout; Semantic UI React; Unsplash-API;",
         image: require("./images/projects/artshare/Dreamer-Child.jpg"),
         video: require('./images/projects/dreamBoard/DreamBoardBestVersion.mov'),
         liveLink: "https://dreamer-board-react.herokuapp.com"
