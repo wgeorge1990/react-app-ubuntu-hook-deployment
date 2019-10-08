@@ -96,7 +96,6 @@ export default class FineArt extends React.Component {
     render() {
         const { photoIndex, isOpen } = this.state;
         return (
-
             <Grid >
                 <Grid.Row columns={1} centered>
                     <Grid.Column>
