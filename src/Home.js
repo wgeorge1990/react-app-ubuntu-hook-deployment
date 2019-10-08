@@ -10,7 +10,7 @@ export default function Home() {
                             </Grid.Column>
                             <Grid.Column width='12'>
                                 <Container fluid style={{ 'height': '1000px', 'textAlign': 'center' }}>
-                                    <h3>Coding is my absolute unbridled passion - driving me to continue learning and growing. I am an experienced full stack Software Engineer with a demonstrated history of working in the higher education industry and a background in graphic design, metal working, and fine art. I am collaborative, creative, teachable, dependable, personable, passionate, and scrappy. I am driven to pursue excellence and I thrive on new challenges and experiences. </h3>
+                            <h2>Passionate Fullstack Engineer and technical educator proficient in Ruby on Rails, Javascript, React, Redux, JWT, Node.Js, Express, MongoDB, Go, Heroku, relational and non-relational databases, pair programming, and learning from documentation. I have a passion for problem-solving, creating fully functional RESTful web apps, learning new technologies, and how to apply them to real-world problems. I discovered my love for programming through a computer science course I took while attending Maryland Institute College of Art and have been learning to build applications ever since. In addition to my technical skills, I bring strong skills in communication, team building, teaching, creativity, and collaboration.</h2>
                                 </Container>
                             </Grid.Column>
                         <Grid.Column width='2'>
