@@ -1,9 +1,7 @@
 import React from 'react'
 import { Image, Grid, Container } from 'semantic-ui-react'
-// import Lightbox from './Lightbox'
-
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in app
 
 export default class FineArt extends React.Component {
     constructor(props) {
@@ -26,26 +24,10 @@ export default class FineArt extends React.Component {
                 this.imagesObject[11],
                 this.imagesObject[12],
                 this.imagesObject[13]
-                
             ]
         }
     }
 
-    // imagesObject = {
-    //     one: require('./images/fineart/1.jpg'),
-    //     two: require('./images/fineart/2.jpg'),
-    //     three: require('./images/fineart/3.jpg'),
-    //     four: require('./images/fineart/4.jpg'),
-    //     five: require('./images/fineart/5.jpg'),
-    //     six: require('./images/fineart/6.jpg'),
-    //     seven: require('./images/fineart/7.jpg'),
-    //     eight: require('./images/fineart/8.jpg'),
-    //     nine: require('./images/fineart/9.jpg'),
-    //     ten :require('./images/fineart/10.jpg'),
-    //     eleven: require('./images/fineart/11.jpg'),
-    //     twelve: require('./images/fineart/12.jpg'),
-    //     thirteen: require('./images/fineart/13.jpg')
-    // };
     imagesObject = [
         require('./images/fineart/1.jpg'),
         require('./images/fineart/2.jpg'),
@@ -62,25 +44,6 @@ export default class FineArt extends React.Component {
         require('./images/fineart/13.jpg')
     ];
 
-    // images = [
-    //     this.imagesObject.two,
-    //     this.imagesObject.three,
-    //     this.imagesObject.four,
-    //     this.imagesObject.five,
-    //     this.imagesObject.six,
-    //     this.imagesObject.seven,
-    //     this.imagesObject.eight,
-    //     this.imagesObject.nine,
-    //     this.imagesObject.ten,
-    //     this.imagesObject.eleven,
-    //     this.imagesObject.twelve,
-    //     this.imagesObject.thirteen,
-    //     this.imagesObject.fourteen,
-    //     this.imagesObject.one,
-    // ]
-
-
-
     openLightBox = (e, index) => {
         // this.images.push(this.imagesObject[index])
         let reArrangeImages = [this.imagesObject[index], ...this.state.images ]
@@ -90,33 +53,32 @@ export default class FineArt extends React.Component {
         this.setState({
             isOpen: !this.state.isOpen
         })
-
     }
 
     render() {
-        const { photoIndex, isOpen } = this.state;
+      const { photoIndex, isOpen } = this.state;
         return (
-            <Grid >
-                <Grid.Row columns={1} centered>
-                    <Grid.Column>
-                        <Container>
-                            <div>
-                                {isOpen && (
-                                    <Lightbox
-                                        mainSrc={this.state.images[photoIndex]}
-                                        nextSrc={this.state.images[(photoIndex + 1) % this.state.images.length]}
-                                        prevSrc={this.state.images[(photoIndex + this.state.images.length - 1) % this.state.images.length]}
-                                        onCloseRequest={ () => this.setState({ isOpen: false })}
-                                        onMovePrevRequest={ () =>
-                                            this.setState({
-                                                photoIndex: (photoIndex + this.state.images.length - 1) % this.state.images.length,
-                                            })
-                                        }
-                                        onMoveNextRequest={() =>
-                                            this.setState({
-                                                photoIndex: (photoIndex + 1) % this.state.images.length,
-                                            })
-                                        }
+          <Grid >
+            <Grid.Row columns={1} centered>
+              <Grid.Column>
+                <Container>
+                  <div>
+                    {isOpen &&
+                        ( <Lightbox
+                            mainSrc={this.state.images[photoIndex]}
+                            nextSrc={this.state.images[(photoIndex + 1) % this.state.images.length]}
+                            prevSrc={this.state.images[(photoIndex + this.state.images.length - 1) % this.state.images.length]}
+                            onCloseRequest={ () => this.setState({ isOpen: false })}
+                            onMovePrevRequest={ () =>
+                                this.setState({
+                                    photoIndex: (photoIndex + this.state.images.length - 1) % this.state.images.length,
+                                })
+                            }
+                            onMoveNextRequest={() =>
+                                this.setState({
+                                    photoIndex: (photoIndex + 1) % this.state.images.length,
+                                })
+                            }
                                     />
                                 )}
                             </div>
@@ -225,7 +187,6 @@ export default class FineArt extends React.Component {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
-        
         )
     }
 }

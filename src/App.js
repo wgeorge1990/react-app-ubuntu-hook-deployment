@@ -209,11 +209,9 @@ class App extends Component {
               </Grid.Row>
           </Grid>
           </Sidebar.Pusher>
-      </Sidebar.Pushable>
-      
-       </Container>
+        </Sidebar.Pushable>
+      </Container>
     )
   }
 }
-
 export default withRouter(windowSize(App))

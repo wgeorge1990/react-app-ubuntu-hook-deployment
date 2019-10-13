@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import 'react-image-lightbox/style.css'; // This only needs to be imported once
 
 const images = [
     require('./images/fineart/1.jpg'),
@@ -18,7 +18,7 @@ const images = [
     require('./images/fineart/13.jpg')
 ];
 
-export default class LightboxExample extends Component {
+class LightboxExample extends Component {
     constructor(props) {
         super(props);
 
@@ -29,14 +29,12 @@ export default class LightboxExample extends Component {
     }
 
     render() {
-        const { photoIndex, isOpen } = this.state;
-
+      const { photoIndex, isOpen } = this.state;
         return (
             <div>
                 <button type="button" onClick={() => this.setState({ isOpen: true })}>
                     Open Lightbox
-        </button>
-
+                </button>
                 {isOpen && (
                     <Lightbox
                         mainSrc={images[photoIndex]}
@@ -59,3 +57,4 @@ export default class LightboxExample extends Component {
         );
     }
 }
+export default LightboxExample
