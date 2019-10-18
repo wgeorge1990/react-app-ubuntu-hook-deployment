@@ -212,6 +212,6 @@ class App extends Component {
         </Sidebar.Pushable>
       </Container>
     )
-  }
+  };
 }
 export default withRouter(windowSize(App))
