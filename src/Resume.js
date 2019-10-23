@@ -4,7 +4,7 @@ export default class Resume extends React.Component {
     render() {
         return (
             <Container>
-                <Image fluid src={require('./images/pdf/WGResume.jpg')}></Image>
+                <Image fluid src={require('./images/pdf/william-10-23.jpg')}></Image>
             </Container>
         )
     }
