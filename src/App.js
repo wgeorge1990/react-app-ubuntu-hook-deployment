@@ -13,7 +13,7 @@ class App extends Component {
     animation: 'overlay',
     direction: 'left',
     dimmed: false,
-    visible: true,
+    visible: false,
     buttonText: "Hide Menu",
     sidebarSize: 'small'
   }
@@ -42,7 +42,6 @@ class App extends Component {
     const { animation, dimmed, direction, visible } = this.state
     return (
       <Container style={{ 'width': '100%' }}>
-    
         <Menu fluid widths={3}>
           <Menu.Item onClick={this.toggleMenu}>
             <Icon name='bars' />
@@ -171,30 +170,10 @@ class App extends Component {
           
           <Sidebar.Pusher dimmed={dimmed && visible} >
             <Grid>
-              <Grid>
-                <Grid.Row columns={1} >
-                  <Grid.Column style={{ 'padding': '20px' }}>
-                    <Image
-                      src={require('./images/profile/IMG_1327.JPG')}
-                      style={{ 'width': "10%" }}
-                      circular
-                      centered />
-                  </Grid.Column>
-                  <Grid.Column style={{}}>
-                    <Header as='h1' textAlign='center' >
-                      <Header.Content>William George</Header.Content>
-                      {/* <h3>Sofware Engineer, Graphic Artist, and life long learner</h3> */}
-                      <Header.Subheader >Sofware Engineer, Graphic Artist, and life long learner</Header.Subheader>
-                    </Header>
-
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
-              <Grid.Row stretched>
-                <Grid.Column width={1} style={{}}>
-                  
-                </Grid.Column>
-                <Grid.Column width={14}>
+              {/* <Grid.Row stretched> */}
+                {/* <Grid.Column width={1} style={{}}>
+                </Grid.Column> */}
+                {/* <Grid.Column width={16}> */}
                   <Switch>
                     <Route exact path='/' render={() => <Home />} />
                     <Route exact path='/FineArt' render={() => <FineArt />} />
@@ -202,11 +181,11 @@ class App extends Component {
                     {/* <Route exact path='/Blogs' render={() => <Blogs />} /> */}
                     <Route exact path='/Resume' render={() => <Resume />} />
                   </Switch> 
-                </Grid.Column>
-                <Grid.Column width={1} style={{ }}> 
+                {/* </Grid.Column> */}
+                {/* <Grid.Column width={1} style={{ }}> 
 
-                </Grid.Column>
-              </Grid.Row>
+                </Grid.Column> */}
+              {/* </Grid.Row> */}
           </Grid>
           </Sidebar.Pusher>
         </Sidebar.Pushable>

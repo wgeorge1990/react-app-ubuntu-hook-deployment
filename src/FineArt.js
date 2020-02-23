@@ -58,7 +58,7 @@ export default class FineArt extends React.Component {
     render() {
       const { photoIndex, isOpen } = this.state;
         return (
-          <Grid >
+            <Grid style={{ 'marginLeft': '20px', 'marginRight': '20px' }}>
             <Grid.Row columns={1} centered>
               <Grid.Column>
                 <Container>

@@ -41,7 +41,7 @@ export default function Development(props) {
         return (
             <div className="development-responsive">
                 <Responsive as={Container} fluid minWidth={901}>
-                    <Grid>
+                    <Grid style={{'marginLeft': '20px', 'marginRight': '20px', 'marginTop': '20px'}}>
                         <Segment placeholder >
                             <Grid columns={3} textAlign='center'>
                             <Grid.Column width={4} >
@@ -112,7 +112,7 @@ export default function Development(props) {
                     {/* Second responsive handles smaller screens */}
                 <Responsive as={Container} style={{ 'width': '100%' }} minWidth={551} maxWidth={900}>
                         <Segment placeholder >
-                        <Grid columns={2}  divided textAlign='center'>
+                        <Grid columns={2}  divided textAlign='center' >
                             {/* <Divider vertical></Divider> */}
                             <Grid.Row verticalAlign='middle' stretched>
                                 <Grid.Column width='5'>
