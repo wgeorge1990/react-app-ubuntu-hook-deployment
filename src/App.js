@@ -102,7 +102,8 @@ class App extends Component {
               onClick={this.toggleMenu} >
               <i className="pencil icon"></i>
               Resume
-            </Link>
+              
+            </Link>   
 
             <Menu.Item>
               <a
