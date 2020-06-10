@@ -38,7 +38,7 @@ class App extends Component {
     this.props.history.goForward()
   }
 
-  render() {
+  render() { 
     const { animation, dimmed, direction, visible } = this.state
     return (
       <Container style={{textAlign: "center", paddingTop: 300}}>
